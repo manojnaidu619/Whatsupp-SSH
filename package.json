@@ -26,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/manojnaidu619/SMSsh/issues"
   },
-  "homepage": "https://github.com/manojnaidu619/SMSsh#readme"
+  "homepage": "https://github.com/manojnaidu619/SMSsh#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
 }
