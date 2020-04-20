@@ -2,7 +2,7 @@
   "name": "smssh",
   "version": "1.0.0",
   "description": "Access your ssh over sms",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
