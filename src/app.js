@@ -1,8 +1,10 @@
 const express = require("express")
 const masterProcess = require("./utils/masterProcess")
+const requestLogger = require("./logger/requestLogger")
 const app = express()
 
 app.use(express.json())
+app.use(requestLogger)
 
 var cwd = process.env.HOME
 
