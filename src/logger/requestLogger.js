@@ -23,12 +23,13 @@ const requestLogger = (req, res, next) => {
     // current seconds
     let seconds = date_ob.getSeconds();
 
-    // prints date & time in YYYY-MM-DD HH:MM:SS format
-    let time = year + "-" + month + "-" + date + "(" + hours + ":" + minutes + ":" + seconds + ")"
+    // date & time in YYYY-MM-DD HH:MM:SS format
+    let currDate = year + "-" + month + "-" + date
+    let currTime = hours + ":" + minutes + ":" + seconds 
 
     // Appending command with timestamp to file
     // fs.appendFile(path.join(__dirname, "..", "..", "logs", "requestLogs.txt").toString(),
-    //     `\n ${req.body.command} - ${(time)}`,
+    //     `\n ${req.body.command} - ${currDate}(${currTime})`,
     //     (err) => { })
     
     next()
