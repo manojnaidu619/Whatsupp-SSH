@@ -12,10 +12,9 @@ const masterProcess = (command, cwd) => {
                     reject(error);
                     return
                 }
-                // cwd = stdout
                 console.log("from line 16 masterprocess")
                 fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), stdout, (err) => {console.log("Data written from masterprocess!")})
-                resolve(stdout)
+                resolve(`current directory : ${stdout}`)
             })
         })
     } else {
@@ -23,8 +22,7 @@ const masterProcess = (command, cwd) => {
             exec(command.toString(), {cwd}, (error, stdout, stderr) => {
                 if (error) {
                     console.log("from line 25 masterprocess")
-                    console.log(error)
-                    reject(error)
+                    reject(`Error : something wrong with command (${error.cmd}) \n Error code : ${error.code}`)
                     return
                 }
                 console.log("from line 30 masterprocess")
