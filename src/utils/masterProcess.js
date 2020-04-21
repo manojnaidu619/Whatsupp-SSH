@@ -22,10 +22,13 @@ const masterProcess = (command, cwd) => {
             exec(command.toString(), {cwd}, (error, stdout, stderr) => {
                 if (error) {
                     console.log("from line 25 masterprocess")
-                    reject(`ERROR -> something wrong with command (${error.cmd}) \n Error code : ${error.code}`)
+                    reject(`ERROR -> ${stderr} Error code : ${error.code}`)
                     return
                 }
                 console.log("from line 30 masterprocess")
+                if (stdout === '') {
+                    resolve(`OK -> (${command}) executed successfully.`)
+                }
                 resolve(stdout)
             });
         })
