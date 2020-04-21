@@ -9,7 +9,7 @@ const masterProcess = (command, cwd) => {
             exec(`${command} && pwd`, { cwd }, (error, stdout, stderr) => {
                 if (error) {
                     console.log("from line 11")
-                    reject(error);
+                    reject(`ERROR -> ${stderr}`);
                     return
                 }
                 console.log("from line 16 masterprocess")
@@ -22,7 +22,7 @@ const masterProcess = (command, cwd) => {
             exec(command.toString(), {cwd}, (error, stdout, stderr) => {
                 if (error) {
                     console.log("from line 25 masterprocess")
-                    reject(`Error : something wrong with command (${error.cmd}) \n Error code : ${error.code}`)
+                    reject(`ERROR -> something wrong with command (${error.cmd}) \n Error code : ${error.code}`)
                     return
                 }
                 console.log("from line 30 masterprocess")
