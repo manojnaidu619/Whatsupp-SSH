@@ -1,0 +1,34 @@
+{
+  "name": "smssh",
+  "version": "1.0.0",
+  "description": "Access your ssh over sms",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manojnaidu619/SMSsh.git"
+  },
+  "keywords": [
+    "sms",
+    "ssh",
+    "bash",
+    "zsh",
+    "linux",
+    "ubuntu",
+    "remote",
+    "access",
+    "server"
+  ],
+  "author": "Manoj Naidu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manojnaidu619/SMSsh/issues"
+  },
+  "homepage": "https://github.com/manojnaidu619/SMSsh#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
