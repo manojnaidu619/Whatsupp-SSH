@@ -19,8 +19,6 @@ app.post('/SMSsh', (req, res) => {
             masterProcess(command, cwd)
                 .then(data => res.send(data))
                 .catch(err => res.send(err))
-                //.catch(err => {res.send(`'${err.cmd}' is not a valid command. error code : ${err.code}`)})
-
         })
         .catch(err => console.log(err))
 })
