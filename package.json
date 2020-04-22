@@ -1,17 +1,17 @@
 {
-  "name": "smssh",
+  "name": "whatsup-ssh",
   "version": "1.0.0",
-  "description": "Access your ssh over sms",
+  "description": "Access your ssh over whatsapp",
   "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manojnaidu619/SMSsh.git"
+    "url": "git+https://github.com/manojnaidu619/Whatsup-SSH.git"
   },
   "keywords": [
-    "sms",
+    "whatsapp",
     "ssh",
     "bash",
     "zsh",
@@ -24,9 +24,9 @@
   "author": "Manoj Naidu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manojnaidu619/SMSsh/issues"
+    "url": "https://github.com/manojnaidu619/Whatsup-SSH/issues"
   },
-  "homepage": "https://github.com/manojnaidu619/SMSsh#readme",
+  "homepage": "https://github.com/manojnaidu619/Whatsup-SSH#readme",
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.3",
