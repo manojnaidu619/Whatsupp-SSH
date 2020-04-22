@@ -1,26 +1,40 @@
 const express = require("express")
+const bodyParser = require('body-parser')
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
+
 const masterProcess = require("./utils/masterProcess")
 const requestLogger = require("./logger/requestLogger")
 const cdTracker = require("./utils/cdTracker")
 
 const app = express()
-
-app.use(express.json())
-
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 app.use(requestLogger)
-
 console.log("initial Load")
 
 // Listening for requests in /SMSsh
 app.post('/SMSsh', (req, res) => { 
-    command = req.body.command.toString()
+    const twiml = new MessagingResponse();
+    command = req.body.Body.toString()
     cdTracker()
         .then(cwd => {
             masterProcess(command, cwd)
-                .then(data => res.send(data))
-                .catch(err => res.send(err))
+                .then(data => {
+                    twiml.message(data)
+                    res.writeHead(200, {'Content-Type': 'text/xml'});
+                    res.end(twiml.toString());
+                })
+                .catch(err => {
+                    twiml.message(err)
+                    res.writeHead(200, {'Content-Type': 'text/xml'});
+                    res.end(twiml.toString());
+                })
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            twiml.message(err)
+            res.writeHead(200, {'Content-Type': 'text/xml'});
+            res.end(twiml.toString());
+        })
 })
 
 app.listen(3000)
