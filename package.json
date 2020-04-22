@@ -1,5 +1,5 @@
 {
-  "name": "whatsup-ssh",
+  "name": "whatsupp-ssh",
   "version": "1.0.0",
   "description": "Access your ssh over whatsapp",
   "main": "./src/app.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manojnaidu619/Whatsup-SSH.git"
+    "url": "git+https://github.com/manojnaidu619/Whatsupp-SSH.git"
   },
   "keywords": [
     "whatsapp",
@@ -24,9 +24,9 @@
   "author": "Manoj Naidu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manojnaidu619/Whatsup-SSH/issues"
+    "url": "https://github.com/manojnaidu619/Whatsupp-SSH/issues"
   },
-  "homepage": "https://github.com/manojnaidu619/Whatsup-SSH#readme",
+  "homepage": "https://github.com/manojnaidu619/Whatsupp-SSH#readme",
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.3",

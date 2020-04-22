@@ -16,7 +16,7 @@ console.log("initial Load")
 
 // Listening for requests in /SMSsh
 app.post('/SMSsh', (req, res) => { 
-    command = req.body.Body.toString()  
+    command = req.body.Body.toString() 
     cdTracker()
         .then(cwd => {
             masterProcess(command, cwd)
