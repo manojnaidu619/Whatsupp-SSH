@@ -28,9 +28,9 @@ const requestLogger = (req, res, next) => {
     let currTime = hours + ":" + minutes + ":" + seconds 
 
     // Appending command with timestamp to file
-    // fs.appendFile(path.join(__dirname, "..", "..", "logs", "requestLogs.log").toString(),
-    //     `\n ${req.body.command} - ${currDate}(${currTime})`,
-    //     (err) => { })
+    fs.appendFile(path.join(__dirname, "..", "..", "logs", "requestLogs.log").toString(),
+        `\n ${req.body.Body} - ${currDate}(${currTime})`,
+        (err) => { })
     
     next()
 }
