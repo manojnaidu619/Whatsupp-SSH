@@ -5,6 +5,7 @@ const masterProcess = require("./utils/masterProcess")
 const requestLogger = require("./logger/requestLogger")
 const cdTracker = require("./utils/cdTracker")
 const twilio = require("./utils/twilio")
+const helperCommands = require('./utils/helperCommands')
 
 const app = express()
 app.use(bodyParser.urlencoded({extended: true}))
@@ -17,6 +18,7 @@ console.log("initial Load")
 // Listening for requests in /SMSsh
 app.post('/SMSsh', (req, res) => { 
     command = req.body.Body.toString() 
+    helperCommands(command, res)
     cdTracker()
         .then(cwd => {
             masterProcess(command, cwd)
