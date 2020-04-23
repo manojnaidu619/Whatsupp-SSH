@@ -5,10 +5,10 @@ const os = require('os')
 
 const helpercommands = (command, res) => {
     switch (command) {
-        
+
         case 'ssh-help':
             const helpData = "history -> gives you the request info \n" + 
-                         "status -> gives you the system status \n"
+                             "status -> gives you the system status \n"
             twilio(helpData, res)
             break
         
@@ -26,7 +26,7 @@ const helpercommands = (command, res) => {
                 })
             break
         
-        case 'stats':
+        case 'status':
             const data = `platform : ${os.platform()} ${os.arch()} \n` +
                 `userInfo : ${JSON.stringify(os.userInfo())} \n` +
                 `total memory : ${os.totalmem()}(in bytes) \n` +
