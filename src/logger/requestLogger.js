@@ -3,6 +3,7 @@ const path = require("path")
 
 const requestLogger = (req, res, next) => {
     let date_ob = new Date();
+    console.log("req logger")
 
     // current date
     // adjust 0 before single digit date

@@ -10,7 +10,7 @@ const cdTracker = () => {
                     fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), "", (err) => { console.log("Data written") })
                 }else{reject(err)}
             }
-            ///data = data.toString().trim()
+            data = data.toString().trim()
             if (data === '') {
                 fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), process.env.HOME, (err) => { console.log("Data written in cdTracker.js") })
                 console.log("resolved from line 13 cdTracker")

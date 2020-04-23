@@ -7,14 +7,19 @@ const requestLogger = require("./logger/requestLogger")
 const cdTracker = require("./utils/cdTracker")
 const twilio = require("./utils/twilio")
 const helperCommands = require('./utils/helperCommands')
+const authValidator = require('./utils/authValidator')
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 app.use(requestLogger)
+app.use(authValidator)
 
 const PORT = 3000
 console.log("initial Load")
+
+const isValidated = false
+console.log(isValidated)
 
 // Listening for requests in /SMSsh
 app.post('/SMSsh', (req, res) => { 
@@ -27,7 +32,7 @@ app.post('/SMSsh', (req, res) => {
                 .catch(err => twilio(err, res))
         })
         .catch(err => twilio(err, res))   
-    }
+    }   
 })
 
 app.listen(PORT, () => console.log(`Listening on port : ${PORT}`))
