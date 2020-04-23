@@ -12,8 +12,8 @@ const authValidator = require('./utils/authValidator')
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-app.use(requestLogger)
 app.use(authValidator)
+app.use(requestLogger)
 
 const PORT = 3000
 console.log("initial Load")

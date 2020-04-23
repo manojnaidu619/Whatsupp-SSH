@@ -4,7 +4,7 @@ const twilio = (data, res) => {
   const twiml = new MessagingResponse();
   twiml.message(data)
   res.writeHead(200, { 'Content-Type': 'text/xml' });
-  return res.end(twiml.toString());
+  res.end(twiml.toString());
 }
 
 module.exports = twilio
