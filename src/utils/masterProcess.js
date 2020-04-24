@@ -9,21 +9,21 @@ const masterProcess = (command, cwd) => {
         return new Promise((resolve, reject) => {
             exec(`${command} && pwd`, { cwd }, (error, stdout, stderr) => {
                 if (error) {
-                    reject(`ERROR -> ${stderr}`);
+                    reject(`❗️${stderr}`);
                     return
                 }
                 fs.writeFile(filePath, stdout, (err) => {if(err) reject(err)})
-                resolve(`current directory : ${stdout}`)
+                resolve(`🗂 : ${stdout}`)
             })
         })
     } else {
         return new Promise((resolve, reject)=> {
             exec(command.toString(), {cwd}, (error, stdout, stderr) => {
                 if (error) {
-                    reject(`ERROR -> ${stderr} Error code : ${error.code}`)
+                    reject(`❗️${stderr} Error code : ${error.code}`)
                     return
                 }
-                if (stdout === '') resolve(`OK -> (${command}) executed successfully.`)
+                if (stdout === '') resolve(`✅ (${command}) executed successfully`)
                 resolve(stdout)
             });
         })

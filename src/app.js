@@ -16,10 +16,6 @@ app.use(authValidator)
 app.use(requestLogger)
 
 const PORT = 3000
-console.log("initial Load")
-
-const isValidated = false
-console.log(isValidated)
 
 // Listening for requests in /SMSsh
 app.post('/SMSsh', (req, res) => { 
