@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 app.use(authValidator)
 app.use(requestLogger)
 
-const PORT = 3000
+const PORT = 3003
 
 // Listening for requests in /SMSsh
 app.post('/SMSsh', (req, res) => { 
