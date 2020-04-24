@@ -7,7 +7,6 @@ const cdTracker = () => {
     return new Promise((resolve, reject) => {
         fs.access(filePath, fs.F_OK, (err) => {
             if (err) {
-                console.log("file doesnt exist")
                 fs.writeFile(filePath, homeDir, (err) => { if (err) reject(err) })
                 resolve(homeDir)
                 return
