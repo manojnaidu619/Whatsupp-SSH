@@ -2,18 +2,17 @@ const exec = require('child_process').exec;
 const fs = require('fs')
 const path = require("path")
 
+const filePath = path.join(__dirname, "..", "cdTracker.txt")
+
 const masterProcess = (command, cwd) => {
-    console.log("(line 6 masterprocess)current working dir : ", cwd, command)
     if (command.startsWith('cd')){
         return new Promise((resolve, reject) => {
             exec(`${command} && pwd`, { cwd }, (error, stdout, stderr) => {
                 if (error) {
-                    console.log("from line 11")
                     reject(`ERROR -> ${stderr}`);
                     return
                 }
-                console.log("from line 16 masterprocess")
-                fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), stdout, (err) => {console.log("Data written from masterprocess!")})
+                fs.writeFile(filePath, stdout, (err) => {if(err) reject(err)})
                 resolve(`current directory : ${stdout}`)
             })
         })
@@ -21,14 +20,10 @@ const masterProcess = (command, cwd) => {
         return new Promise((resolve, reject)=> {
             exec(command.toString(), {cwd}, (error, stdout, stderr) => {
                 if (error) {
-                    console.log("from line 25 masterprocess")
                     reject(`ERROR -> ${stderr} Error code : ${error.code}`)
                     return
                 }
-                console.log("from line 30 masterprocess")
-                if (stdout === '') {
-                    resolve(`OK -> (${command}) executed successfully.`)
-                }
+                if (stdout === '') resolve(`OK -> (${command}) executed successfully.`)
                 resolve(stdout)
             });
         })

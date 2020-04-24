@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const twilio = require('./twilio')
 
-const authTime = 20000             // in milliseconds
+const authTime = 300000             // in milliseconds
 const filePath = path.join(__dirname, "..", "authTime.txt")
 const sshPassword = process.env.SSH_PSWD.toString().trim()
 global.initialLogin = true
@@ -13,7 +13,6 @@ const writeDataToFile = (data, res) => {
 
 const authValidator = (req, res, next) => {
     const reqData = req.body.Body
-
     new Promise((resolve, reject) => {
         fs.access(filePath, fs.F_OK, (err) => {
             if (err) {
@@ -26,7 +25,8 @@ const authValidator = (req, res, next) => {
             const lastAuthTime = parseInt(data.toString().trim())
             if ((Date.now() - lastAuthTime) > authTime || initialLogin) {
                 if (reqData != sshPassword) {
-                    twilio("Please authenticate...", res); return
+                    twilio("Please authenticate...", res)
+                    return
                 }
                 writeDataToFile(Date.now(), res)
                 initialLogin = false

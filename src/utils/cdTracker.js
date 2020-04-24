@@ -1,25 +1,23 @@
 const fs = require('fs')
-const path = require("path")
+const path = require('path')
+const filePath = path.join(__dirname, "..", "cdTracker.txt")
+const homeDir = process.env.HOME
 
 const cdTracker = () => {
     return new Promise((resolve, reject) => {
-        fs.readFile(path.join(__dirname, "..", "cdTracker.txt"), (err, data)=>{
+        fs.access(filePath, fs.F_OK, (err) => {
             if (err) {
-                console.log(err)
-                if (err.errno == -2) {
-                    fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), "", (err) => { console.log("Data written") })
-                }else{reject(err)}
+                console.log("file doesnt exist")
+                fs.writeFile(filePath, homeDir, (err) => { if (err) reject(err) })
+                resolve(homeDir)
+                return
             }
-            data = data.toString().trim()
-            if (data === '') {
-                fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), process.env.HOME, (err) => { console.log("Data written in cdTracker.js") })
-                console.log("resolved from line 13 cdTracker")
-                resolve(process.env.HOME)
-            } else {
-                console.log("resolved from line 16 cdTracker")
-                resolve(data)
-            }
-        });
+            fs.readFile(filePath, (err, currDir) => {
+                if (err) { reject(err) }
+                currDir = currDir.toString().trim()
+                resolve(currDir)
+            });
+        })
     })
     
 }
