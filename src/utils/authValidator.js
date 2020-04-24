@@ -12,7 +12,6 @@ const writeDataToFile = (data, res) => {
 }
 
 const authValidator = (req, res, next) => {
-    console.log(initialLogin)
     const reqData = req.body.Body
     new Promise((resolve, reject) => {
         fs.access(filePath, fs.F_OK, (err) => {
