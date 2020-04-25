@@ -13,7 +13,7 @@ const helperCommands = (command, res) => {
     }
     else if (command === 'ssh-history') {
         new Promise((resolve, reject) => {
-            fs.readFile(path.join(__dirname, "..", "..", "logs", "requestLogs.log"), (err, data) => {
+            fs.readFile(path.join(__dirname, "..", "..", "..", "logs", "requestLogs.log"), (err, data) => {
                 if (err) { reject(err) }
                 resolve(data.toString())
             })
@@ -36,7 +36,7 @@ const helperCommands = (command, res) => {
         return true
     }
     else if (command === 'ssh-reset') {
-        fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), '', () => twilio('Done! ✅', res))
+        fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), '', (err) => twilio('Done! ✅', res))
         return true
     }
     return false
