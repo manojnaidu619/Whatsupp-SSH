@@ -11,8 +11,7 @@ const writeDataToFile = (data, res) => {
     fs.writeFileSync(filePath, data, (err) => { if (err) twilio(err, res) })
 }
 
-const authValidator = (req, res, next) => {
-    const reqData = req.body.Body
+const twilioHandler = () => {
     new Promise((resolve, reject) => {
         fs.access(filePath, fs.F_OK, (err) => {
             if (err) {
@@ -21,7 +20,13 @@ const authValidator = (req, res, next) => {
             }
             resolve(null)
         })
-    }).then(() => { 
+    })
+}
+
+const authValidator = async (req, res, next) => {
+    const reqData = req.body.Body
+    try{
+        await twilioHandler(res)
         fs.readFile(filePath, (err, data) => { 
             const lastAuthTime = parseInt(data.toString().trim())
             const currTime = Date.now() - lastAuthTime
@@ -37,7 +42,10 @@ const authValidator = (req, res, next) => {
                 next()
             }
         })
-    })
+    } catch (err) {
+        twilio(err, res)
+    }
+    
 }
 
 module.exports = authValidator
