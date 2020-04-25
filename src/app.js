@@ -8,10 +8,12 @@ const cdTracker = require("./utils/cdTracker")
 const twilio = require("./utils/twilio")
 const helperCommands = require('./utils/helperCommands')
 const authValidator = require('./utils/authValidator')
+const twilioWebhookValidator = require('./utils/twilioWebhookValidator')
 
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '10kb' }))     // to prevent DOS attack
 
+app.use(twilioWebhookValidator)
 app.use(authValidator)
 app.use(requestLogger)
 
