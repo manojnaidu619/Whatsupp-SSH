@@ -36,7 +36,13 @@ const helperCommands = (command, res) => {
         return true
     }
     else if (command === 'ssh-reset') {
-        fs.writeFile(path.join(__dirname, "..", "cdTracker.txt"), '', (err) => twilio('Done! ✅', res))
+        fs.writeFile(path.join(__dirname, "..", "..", "trackers", "cdTracker.txt"), '', (err) => {
+            if (err) {
+                twilio(err, res)
+                return
+            }
+            twilio('Done! ✅', res)
+        })
         return true
     }
     return false

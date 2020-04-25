@@ -3,7 +3,7 @@ const path = require('path')
 const twilio = require('./twilio')
 
 const authTime = 300000             // in milliseconds (5 minutes by default)
-const filePath = path.join(__dirname, "..", "authTime.txt")
+const filePath = path.join(__dirname, "..", "..", "trackers", "authTime.txt")
 const sshPassword = process.env.SSH_PSWD.toString().trim()
 global.initialLogin = false
 

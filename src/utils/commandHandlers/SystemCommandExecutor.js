@@ -1,4 +1,4 @@
-const cdTracker = require('../cdTracker')
+const cdTracker = require('../validators/cdTracker')
 const masterProcess = require('./masterProcess')
 const twilio = require('../validators/twilio')
 

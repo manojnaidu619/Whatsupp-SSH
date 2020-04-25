@@ -2,7 +2,7 @@ const exec = require('child_process').exec;
 const fs = require('fs')
 const path = require("path")
 
-const filePath = path.join(__dirname, "..", "..", "cdTracker.txt")
+const filePath = path.join(__dirname, "..", "..", "trackers", "cdTracker.txt")
 
 const masterProcess = (command, cwd) => {
     if (command.startsWith('cd')){
