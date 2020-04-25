@@ -36,7 +36,7 @@ const helperCommands = (command, res) => {
         return true
     }
     else if (command === 'ssh-reset') {
-        fs.writeFile(path.join(__dirname, "..", "..", "trackers", "cdTracker.txt"), '', (err) => {
+        fs.writeFile(path.join(__dirname, "..", "..", "trackers", "cdTracker.txt"), process.env.HOME, (err) => {
             if (err) {
                 twilio(err, res)
                 return
