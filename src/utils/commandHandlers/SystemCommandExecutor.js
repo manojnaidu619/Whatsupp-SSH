@@ -1,6 +1,6 @@
-const cdTracker = require('./cdTracker')
+const cdTracker = require('../cdTracker')
 const masterProcess = require('./masterProcess')
-const twilio = require('./twilio')
+const twilio = require('../validators/twilio')
 
 const systemCommandExecutor = async (command, res) => {
     try {

@@ -1,4 +1,4 @@
-const twilio = require('./twilio')
+const twilio = require('../validators/twilio')
 const path = require('path')
 const fs = require('fs')
 const os = require('os')
