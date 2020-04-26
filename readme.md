@@ -1,6 +1,8 @@
-# Whatsupp-SSH?
+# Whatsupp SSH?
 
-## Setup
+ This is a Nodejs application integrated with [Twilio's API for WhatsApp](https://www.twilio.com/whatsapp), which could be installed and configured on any remote server(*dead simple to setup!, trust me* 🙌) or computer(with UNIX based OS), results in gaining access to it remotely and execute shell commands over WhatsApp.
+ 
+## How to Setup?
 
 The setup process is really simple, you just have to follow these four steps...
 
@@ -14,7 +16,7 @@ The setup process is really simple, you just have to follow these four steps...
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/2318vtr78kp5ivvkonaw.png)
 
-* Now, One final thing needs to be added. We will see that later...
+* One final thing needs to be added. We will see that later...
 
 **Step-2** Configure port on the server/ computer.
 
@@ -38,7 +40,7 @@ Then add a new rule like so...
 
 > All the actions are performed inside the terminal.
 
-* `cd` into the directory where you want to place the app.
+* `cd` into the directory where you want to clone the app.
 
 * Now, clone the project repo.
 
@@ -52,14 +54,15 @@ $ cd Whatsupp-SSH/
 
 $ sudo npm install
 ```
-* As we are logging the requests into a log file, we need to give appropriate permissions to the directories.
+* As we are logging the requests into a log file, we need to give appropriate permissions to the app directory and the folders inside it.
+(The path to project must be absolute)
 
 ```bash
-$ sudo chmod -R a+rw PATH_TO_PROJECT/Whatsupp-SSH/
+$ sudo chmod -R a+rw ~/home/Whatsupp-SSH
 ```
 * Now adding `env` variables, which our app relies on. *Make sure the key is same as mentioned below.*
 
-> I am considering OS as Ubuntu.
+> Here, I am considering Ubuntu as the OS.
 
 ```bash
 $ sudo nano /etc/bash.bashrc
@@ -68,7 +71,7 @@ scroll down to the bottom of the file and add these lines by replacing the value
 
 ```
 export SSH_PSWD=YOUR_DESIRED_PASSWORD
-export TWILIO_URL=http://YOUR_IPv4_PUBLIC_IP:3003/Whatsupp-SSH
+export TWILIO_URL=http://YOUR_PUBLIC_IP:3003/Whatsupp-SSH
 export TWILIO_AUTH_TOKEN=YOUR_TWILIO_AUTH_TOKEN
 ```
 then source the `bash.bashrc` file by typing.
@@ -78,7 +81,7 @@ $ source /etc/bash.bashrc
 ```
 * Now, copy the same TWILIO_URL that was added to `bash.bashrc` file. 
 
-> Remember that we had one last thing to be added to *Twilio sandbox configuration*... It's time to do that.
+> Remember that we had one last thing to add to *Twilio sandbox configuration*... It's time to do that.
 
 head to *twilio console -> programmable SMS -> Whatsapp -> Sandbox* 
 
@@ -86,7 +89,7 @@ head to *twilio console -> programmable SMS -> Whatsapp -> Sandbox*
 
 After adding that, scroll down and hit **Save**.
 
-**STEP-4**. Head to your server and run these final commands.
+**STEP-4**. Head to your server/computer and run these final commands.
 
 * install `pm2`.
 
@@ -112,7 +115,7 @@ $ pm2 save
 * just one final command left, you have successfully setup the app. Now let's start the `pm2` server.
 
 ```bash
-$ pm2 start PATH_TO_APP/src/app.js
+$ pm2 start ABSOLUTE_PATH_TO_WHATSUPP-SSH/src/app.js
 ```
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/dqh1tjmg392dde1czsqu.png)
@@ -121,6 +124,6 @@ $ pm2 start PATH_TO_APP/src/app.js
 
 ## License & copyright
 
-© Manoj Naidu
+© 2020 Manoj Naidu
 
 Licensed under [MIT License](LICENSE)
