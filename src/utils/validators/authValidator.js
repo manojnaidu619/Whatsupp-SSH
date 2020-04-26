@@ -11,7 +11,7 @@ const writeDataToFile = (data, res) => {
     fs.writeFileSync(filePath, data, (err) => { if (err) twilio(err, res) })
 }
 
-const twilioHandler = () => {
+const twilioHandler = (res) => {
     new Promise((resolve, reject) => {
         fs.access(filePath, fs.F_OK, (err) => {
             if (err) {
