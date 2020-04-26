@@ -124,6 +124,8 @@ $ pm2 start ABSOLUTE_PATH_TO_WHATSUPP-SSH/src/app.js
 
 **Hurray! 🙌 your app is now up and running, get started by sending a simple command to your Twilio sandbox over Whatsapp**.
 
+**For more info, checkout the dev post [here](https://dev.to/manojnaidu619/whatsupp-ssh-accessing-ssh-over-whatsapp-2g3g)**
+
 ## License & copyright
 
 © 2020 Manoj Naidu
