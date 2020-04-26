@@ -12,7 +12,7 @@ const systemCommandExecutor = require('./utils/commandHandlers/SystemCommandExec
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json({ limit: '10kb' }))     // to prevent DOS attack
 
-//app.use(twilioWebhookValidator)         // Verifies whether request is actually sent by twilio
+app.use(twilioWebhookValidator)         // Verifies whether request is actually sent by twilio
 app.use(authValidator)                  // Verifies if user is authenticated yet 
 app.use(requestLogger)                  // custom requests logger   
 

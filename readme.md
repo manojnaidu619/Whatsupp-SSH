@@ -1,8 +1,8 @@
-# Whatsupp-SSH
+# Whatsupp-SSH?
 
 ## Setup
 
-The setup process is really simple, you just have to follow these steps...
+The setup process is really simple, you just have to follow these four steps...
 
 **Step-1**. Signup for a Twilio Account and join the Twilio Whatsapp sandbox.
 
@@ -59,7 +59,7 @@ $ sudo chmod -R a+rw PATH_TO_PROJECT/Whatsupp-SSH/
 ```
 * Now adding `env` variables, which our app relies on. *Make sure the key is same as mentioned below.*
 
-> I am setting up for Ubuntu, refer to official docs on how to add ENV variables related to your preferred OS.
+> I am considering OS as Ubuntu.
 
 ```bash
 $ sudo nano /etc/bash.bashrc
@@ -68,7 +68,7 @@ scroll down to the bottom of the file and add these lines by replacing the value
 
 ```
 export SSH_PSWD=YOUR_DESIRED_PASSWORD
-export TWILIO_URL=http://YOUR_PUBLIC_IP:3003/Whatsupp-SSH
+export TWILIO_URL=http://YOUR_IPv4_PUBLIC_IP:3003/Whatsupp-SSH
 export TWILIO_AUTH_TOKEN=YOUR_TWILIO_AUTH_TOKEN
 ```
 then source the `bash.bashrc` file by typing.
