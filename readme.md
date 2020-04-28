@@ -52,9 +52,7 @@ If using AWS EC2 then you need to add a new rule inside *Security Groups -> Inbo
 
 * `cd` into the directory where you want to clone the app.
 
-* Now, clone the project repo.
-
-{% github manojnaidu619/Whatsupp-SSH no-readme %}
+* Now, clone this repo.
 
 ```bash
 $ sudo git clone https://github.com/manojnaidu619/Whatsupp-SSH.git
