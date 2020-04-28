@@ -1,11 +1,11 @@
-# Whatsupp SSH?
+# Whatsupp SSH? ![](https://img.shields.io/badge/made%20with-Node-success.svg?style=for-the-badge)
 
  This is a Nodejs application integrated with [Twilio's API for WhatsApp](https://www.twilio.com/whatsapp), which could be installed and configured on any remote server(*dead simple to setup!, trust me* 🙌) or computer(with UNIX based OS), results in gaining access to it remotely and execute shell commands over WhatsApp.
 
-⚠️  **Click on dev logo to view detailed post**
+📌 **Click on DEV logo below to view detailed post**
 
 <a href="https://dev.to/manojnaidu619/whatsupp-ssh-accessing-ssh-over-whatsapp-2g3g">
-  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Manoj Naidu's DEV Profile" height="75" width="75">
+  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Manoj Naidu's DEV Profile" height="100" width="100">
 </a>
  
 ## How to Setup?
@@ -136,7 +136,8 @@ $ pm2 start ABSOLUTE_PATH_TO_WHATSUPP-SSH/src/app.js
 
 **Hurray! 🙌 your app is now up and running, get started by sending a simple command to your Twilio sandbox over Whatsapp**.
 
-⚠️  **For more info, checkout the complete dev post**
+📌 For more info on *unique features*, *security*, *limitations*... check out the complete post by clicking on the DEV logo.
+
 <a href="https://dev.to/manojnaidu619/whatsupp-ssh-accessing-ssh-over-whatsapp-2g3g">
   <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Manoj Naidu's DEV Profile" height="75" width="75">
 </a>
