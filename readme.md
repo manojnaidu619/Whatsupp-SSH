@@ -1,14 +1,10 @@
 
 # Whatsupp SSH? [![Node badge](https://img.shields.io/badge/MADE%20WITH-NODE-brightgreen.svg?style=for-the-badge)](https://nodejs.org/en/) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-green.svg?style=for-the-badge)](https://github.com/manojnaidu619/Whatsupp-SSH/blob/master/LICENSE)
 
-![Whatsupp-SSH](https://dev-to-uploads.s3.amazonaws.com/i/4io2z2u9np0dfmf8esql.jpg)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/4io2z2u9np0dfmf8esql.jpg)
 
 <center>
-<img alt="NodeJs" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" height="50" width="50"/>
-<img alt="plus" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Plus_symbol.svg/500px-Plus_symbol.svg.png" height="40" width="40"/>
-<img alt="twilio" src="https://cdn.worldvectorlogo.com/logos/twilio.svg" height="50" width="50"/>
-<img alt="plus" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Plus_symbol.svg/500px-Plus_symbol.svg.png" height="40" width="40"/>
-<img alt="aws ec2" src="https://cdn.worldvectorlogo.com/logos/aws-ec2.svg" height="50" width="50"/>
+<img src="https://dev-to-uploads.s3.amazonaws.com/i/w6bhmjaksmx3qk0cf6jl.png" width="200"/>
 </center>
 
  This is a Nodejs application integrated with [Twilio's API for WhatsApp](https://www.twilio.com/whatsapp), which could be installed and configured on any remote server(*dead simple to setup!, trust me* 🙌) or computer(with UNIX based OS), results in gaining access to it remotely and execute shell commands over WhatsApp.
