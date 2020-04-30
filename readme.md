@@ -3,7 +3,7 @@
 
 ![Whatsupp-SSH](https://dev-to-uploads.s3.amazonaws.com/i/4io2z2u9np0dfmf8esql.jpg)
 
-<div align=”center”>
+<div style="text-align:center">
  <img alt="nodejs+twilio+ec2" src="https://dev-to-uploads.s3.amazonaws.com/i/w6bhmjaksmx3qk0cf6jl.png" width="200"/>
 </div>
 
