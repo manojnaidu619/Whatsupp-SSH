@@ -3,9 +3,9 @@
 
 ![Whatsupp-SSH](https://dev-to-uploads.s3.amazonaws.com/i/4io2z2u9np0dfmf8esql.jpg)
 
-<p style="text-align: center;">
- <img alt="nodejs+twilio+ec2" src="https://dev-to-uploads.s3.amazonaws.com/i/w6bhmjaksmx3qk0cf6jl.png" width="200"/>
-</p>
+<center> 
+ ![twilio+nodejs+ec2](https://dev-to-uploads.s3.amazonaws.com/i/k153r6fckwy68juu41ys.jpg)
+</center>
 
  This is a Nodejs application integrated with [Twilio's API for WhatsApp](https://www.twilio.com/whatsapp), which could be installed and configured on any remote server(*dead simple to setup!, trust me* 🙌) or computer(with UNIX based OS), results in gaining access to it remotely and execute shell commands over WhatsApp.
 
