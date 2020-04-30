@@ -1,7 +1,7 @@
 
 # Whatsupp SSH? [![Node badge](https://img.shields.io/badge/MADE%20WITH-NODE-brightgreen.svg?style=for-the-badge)](https://nodejs.org/en/) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-green.svg?style=for-the-badge)](https://github.com/manojnaidu619/Whatsupp-SSH/blob/master/LICENSE)
 
-![twilio+nodejs+ec2](https://dev-to-uploads.s3.amazonaws.com/i/k153r6fckwy68juu41ys.jpg)
+![node+twilio+ec2](https://dev-to-uploads.s3.amazonaws.com/i/rbppg2w0jekr768e6wsn.jpg)
 
  This is a Nodejs application integrated with [Twilio's API for WhatsApp](https://www.twilio.com/whatsapp), which could be installed and configured on any remote server(*dead simple to setup!, trust me* 🙌) or computer(with UNIX based OS), results in gaining access to it remotely and execute shell commands over WhatsApp.
 
