@@ -1,12 +1,23 @@
+
 # Whatsupp SSH? [![Node badge](https://img.shields.io/badge/MADE%20WITH-NODE-brightgreen.svg?style=for-the-badge)](https://nodejs.org/en/) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-green.svg?style=for-the-badge)](https://github.com/manojnaidu619/Whatsupp-SSH/blob/master/LICENSE)
+
+![Whatsupp-SSH](https://dev-to-uploads.s3.amazonaws.com/i/4io2z2u9np0dfmf8esql.jpg)
+
+<center>
+<img alt="NodeJs" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" height="50" width="50"/>
+<img alt="plus" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Plus_symbol.svg/500px-Plus_symbol.svg.png" height="40" width="40"/>
+<img alt="twilio" src="https://cdn.worldvectorlogo.com/logos/twilio.svg" height="50" width="50"/>
+<img alt="plus" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Plus_symbol.svg/500px-Plus_symbol.svg.png" height="40" width="40"/>
+<img alt="aws ec2" src="https://cdn.worldvectorlogo.com/logos/aws-ec2.svg" height="50" width="50"/>
+</center>
 
  This is a Nodejs application integrated with [Twilio's API for WhatsApp](https://www.twilio.com/whatsapp), which could be installed and configured on any remote server(*dead simple to setup!, trust me* 🙌) or computer(with UNIX based OS), results in gaining access to it remotely and execute shell commands over WhatsApp.
 
 📌 **Click on DEV logo below to view detailed post**
 
-<a href="https://dev.to/manojnaidu619/whatsupp-ssh-accessing-ssh-over-whatsapp-2g3g">
+<center><a href="https://dev.to/manojnaidu619/whatsupp-ssh-accessing-ssh-over-whatsapp-2g3g">
   <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Manoj Naidu's DEV Profile" height="100" width="100">
-</a>
+</a></center>
  
 ## How to Setup?
 
@@ -136,9 +147,9 @@ $ pm2 start ABSOLUTE_PATH_TO_WHATSUPP-SSH/src/app.js
 
 📌 For more info on *unique features*, *security*, *limitations*... check out the complete post by clicking on the DEV logo.
 
-<a href="https://dev.to/manojnaidu619/whatsupp-ssh-accessing-ssh-over-whatsapp-2g3g">
+<center><a href="https://dev.to/manojnaidu619/whatsupp-ssh-accessing-ssh-over-whatsapp-2g3g">
   <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Manoj Naidu's DEV Profile" height="75" width="75">
-</a>
+</a></center>
 
 ## License & copyright
 
