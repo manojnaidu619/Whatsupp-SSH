@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/manojnaidu619/Whatsupp-SSH#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nodemon": "^2.0.3",
     "twilio": "^3.42.2"
   }
